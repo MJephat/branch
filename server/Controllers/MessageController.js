@@ -15,6 +15,19 @@ const addMessage = async (req, res) => {
   }
 };
 
+const allMessages = async (req, res) => {
+  try {
+    const messages = await MessageModel.find(); // Fetch all messages from the collection
+    res.status(200).json(messages); // Respond with the fetched messages
+  } catch (error) {
+    res
+      .status(500)
+      .json({ error: "An error occurred while fetching messages." }); // Handle errors
+  }
+};
+
+
+
 const getMessages = async (req, res) => {
   const { chatId } = req.params;
   try {
@@ -26,4 +39,6 @@ const getMessages = async (req, res) => {
 };
 
 
-module.exports = { getMessages, addMessage };
+
+
+module.exports = { getMessages, addMessage, allMessages };

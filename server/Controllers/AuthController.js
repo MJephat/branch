@@ -2,9 +2,9 @@ const UserModel = require('../Models/userModel.js');
 
 exports.registerUser = async(req, res) => {
     const newUser = new UserModel(req.body);
-    const {username} = req.body
+    const {user_id} = req.body
     try{
-        const oldUser = await UserModel.findOne({username});
+        const oldUser = await UserModel.findOne({user_id});
 
         if (oldUser)
             return res.status(400).json({message: "User already exists"});

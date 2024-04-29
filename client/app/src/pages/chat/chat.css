@@ -9,6 +9,8 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  height: 90vh;
+  overflow: scroll;
 }
 
 .Chat-container {
@@ -31,6 +33,24 @@
   overflow: auto;
 }
 
+.userChat{
+  padding :10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  &:hover{
+      background: linear-gradient(106.23deg, #007FFF 0%, #c4c0d6 100%);
+      color: white
+  }
+}
+
+img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 .Right-side-chat {
   display: flex;
   flex-direction: column;

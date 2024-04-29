@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useRef } from "react";
 // import { addMessage, getMessages } from "../../api/MessageRequests";
 // import { getUser } from "../../api/UserRequests";
@@ -7,8 +7,7 @@ import "./ChatBox.css";
 import InputEmoji from "react-input-emoji";
 
 const ChatBox = ({ chat, currentUser, setSendMessage, receivedMessage }) => {
-  const [userData, setUserData] = useState(null);
-  const [messages, setMessages] = useState([]);
+
   const [newMessage, setNewMessage] = useState("");
 
   const handleChange = (newMessage) => {

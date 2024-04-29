@@ -10,8 +10,8 @@ import { useToast } from "@chakra-ui/react";
 
 const LogoSearch = () => {
 
-  const [loading, setLoading] = useState(false);
-  const [searchResult, setSearchResult] = useState([]);
+  const [ setLoading] = useState(false);
+  const [ setSearchResult] = useState([]);
   const [search, setSearch] = useState("");
 
 
